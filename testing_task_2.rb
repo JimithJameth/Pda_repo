@@ -11,15 +11,16 @@ def func_1 (val)
   end
 end
   
-def max (a, b)
+def max (a,b)
   if a > b
     return a 
-  else b
+  else
+    return b
   end 
 end 
 
   
-def looper (i)
+def looper
   for i in 1..10
   puts i
   end
@@ -31,28 +32,28 @@ if (looper) == 10
   puts "looper passed"
 else
   puts "looper failed"
-  failures = failures += 1
+  failures = failures + 1
  
   
-if func_1 (3) == false
-  puts "func_1 (3) passed"
+if func_1(3) == false
+  puts "func_1(3) passed"
 else
-  puts "func_1 (3) failed"
+  puts "func_1(3) failed"
   failures = failures += 1
 end 
  
   
-if max (101) == 100 
-  puts "max (101) passed"
+if max(100,1) == 100 
+  puts "max(100,1) passed"
 else
-  puts "func_1 (3) failed"
-  failures = failures += 1
+  puts "func_1(3) failed"
+  failures = failures + 1
 end
 
   
-if failures == 10
+if failures == 1
   puts "Test Failed"
 else
   puts "Test Passed"
-end
+  end
 end
